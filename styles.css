@@ -1,0 +1,237 @@
+@keyframes glow {
+    from {
+        text-shadow: rgba(255, 255, 255, 0);
+    }
+    to {
+        text-shadow: rgb(255, 255, 255);
+    }
+}
+@keyframes orientation {
+    from {
+        background: linear-gradient(-45deg, rgba(0, 0, 0, 1) 50%, rgba(154, 189, 223, 1) 0%);
+    }
+    to {
+        background: linear-gradient(-90deg, rgba(0, 0, 0, 1) 50%, rgba(154, 189, 223, 1) 0%);
+    }
+}
+@keyframes right {
+    from {
+        transform: translate(0px, 0px);
+    }
+    to {
+        transform: translate(100px, 0px);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+.flex-container {
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 5rem;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+p {
+    font-size: 1rem;
+    color:rgb(154, 189, 220);
+    font-weight: 400;
+    display: inline-block;
+    padding: 0;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    hyphens: manual;
+    inline-size: inherit;
+    position: relative;
+    z-index: 2;
+}
+.padding {
+    padding-top: 200px;
+}
+body {
+    background-color: blue;
+    position: relative;
+    top: 0; left: 0;
+    margin: 5;
+    padding: 10px;
+    /*overflow-x: hidden; *fixes horizontal scroll thing, but was more of bandaid*/
+}
+html {
+    border: 2px solid red;
+}
+.bg {
+    border: 2px solid pink;
+    background-color: rgb(102, 12, 12);
+    background-position: center;
+    background-position: cover;
+    background-repeat: repeat;
+    position: fixed; /* see MMDN Web Docs for positioning, this is what fixed the scroll issue.*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* ( this was for the image background, decided didn't need.
+    width: 100vw;
+    height: 100vh;
+    */
+    min-height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.hl {
+    border-top: 2px solid black;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    margin-left: -8.5px;
+}
+.flex {     /* FLEX BOX FOR MAIN PANELS! */
+    border: 2px solid rgb(206, 21, 160);
+    margin-top: -1px;
+    margin: auto;
+    display: flex;
+    width: fit-content;
+}
+.left, .right, .middle {
+    flex: 0 0 auto;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    width: 400px;
+    padding-top: 10px;
+    z-index: 0;
+}
+.middle {
+    border: rgb(48, 31, 144) solid 2px;
+}
+.left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1; 
+    pointer-events: none;
+    z-index: 0;
+}
+.left::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 1;
+}
+/* opted for a background image using a blur filter but in 
+* the end I liked the more simple style. */
+.right::before {
+    /* filter: blur(3.5px); */
+    /* background-image: url("imgs/background.png"); */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1; 
+    pointer-events: none;
+    z-index: 0;
+}
+.right::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 1;
+  }
+.dividing-line {
+    border-left: 2px solid black;
+    height: 500px;
+    top: 0;
+}
+h2, h3, h4, h5, h6, h7 {
+    color: rgb(154, 189, 220);
+    font-size: 2.5rem;
+    font-weight: normal;
+    overflow-wrap: break-word;
+    inline-size: inherit;
+    margin: 0;
+    padding: 2px;
+    /*background: linear-gradient(90deg, rgba(19, 11, 177, 0.726) 10%, rgba(21, 21, 173, 0.30) 40%, rgba(0, 213, 255, 0) 100%); */
+    position: relative;
+    z-index: 2;
+}
+.heading {
+    position: relative;
+    order: 1;
+    padding-left: 10px;
+    font-size: 3rem;
+    animation-fill-mode: forwards;
+    animation-name: right;
+    animation-duration: 2s;
+    z-index: 1;
+}
+.headingAnimation {
+    translate: -40px, 20px;
+}
+.heading-background {
+    content: "";
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 1) 50%, rgba(154, 189, 223, 1) 0%);
+    top: 0;
+    z-index: -1;
+}
+.collapse {
+    border: 4px solid red;
+    animation: orientation;
+    animation-duration: 2s;
+    transition: ease-out;
+}
+.contact-flex {
+    display: flex;
+    margin-left: -10px; /*spands the element to edge of page*/
+    margin-right: -10px;
+    padding-right: -15px; /*adjust back into frame*/
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color:  rgba(154, 189, 223, 1);
+}
+.contact-flex:hover {
+    background-color: black;
+}
+.contact-content {
+    color:#000000;
+    font-weight:400;
+}
+.contact-item {
+    padding-left: 50px;
+}
+.header {
+    display: flex;
+}
+.glow-animation {
+    animation-name: glow;
+    animation-duration: 2s;
+    animation-delay: 2s;
+}
+.test {
+   background-color: #ffffff00; 
+}

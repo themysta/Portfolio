@@ -1,0 +1,12 @@
+.gameWindow {
+    position: relative;
+    width: 100%;
+    height: min-content;
+    background: black;
+}
+.player {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-color: brown;
+}

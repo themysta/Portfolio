@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="game.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+    <div class="bg"></div>
+    <section>
+        <div class="heading">
+            <h1>Resume<br>Tristan Pereira</br></h1>
+        </div>
+    </section>
+    <div class="hl"></div>
+    <div class="contact-flex">
+        <div class="contact-content">
+            <span>Email: tristan.pereira18@gmail.com</span>
+            <span class="contact-item">Phone: 206-466-9305</span>
+            <span class="contact-item">Location: Bellevue, WA</span>
+        </div>
+    </div>
+    <div class="hl"></div>
+
+    <div class="flex">
+        <section class="left">
+            <h2 class="padding">Experience</h2>
+            <p>Long long ago I used to create games using SFML(C++) and Unity(C#). I will include a link to those projects soon. I've been programming as a hobby for several years now and thought it would be cool to show my progress on a website built from the basics.</p>
+        </section>
+    <!--<div class="dividing-line"></div>-->
+        <section class="middle">
+            <h4>Introduction</h4>
+            <p><b>Hello World!</b><br>this site was created to complete a cloud resume challange.</br></p>
+            <canvas width="200" height="200" class= "gameWindow" id="canvas">
+                <img src="imgs/ship.png" id="ship"></img>
+            </canvas>
+        </section>
+    <!--<div class="dividing-line"></div>-->
+        <section class="right">
+            <h4 class="padding">Future</h4>
+            <p>As the website is being developed, I will also be working on a space invaders clone to practice javascript as I am unfamiliar with the language.</p>
+        </section>
+            <div class="flex-container" id="sprite"></div>
+    </div>
+    <script src="script.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>
