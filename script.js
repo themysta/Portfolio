@@ -1,4 +1,22 @@
-
+//NEED TO PARSE
+function isMobile() {
+    const device = /Mobi|Iphone|webOS/i;
+    return device.test(navigator.userAgent);
+}
+if(isMobile()) {
+    Resize(window.innerWidth, window.innerHeight);
+} else {
+    console.log("Likely desktop");
+}
+function Resize(width, height) {
+    let ratio = { x:0, y:0 };  
+     ratio.x = width / 1920;
+     ratio.y = height / 1080
+     if(ratio.x && ratio.y < 1) {
+        heading.style.width / ratio.x;
+        headomg.style.height / ratio.y;
+     }
+}
 const test = document.getElementById('sprite');
 test.addEventListener("keydown", (event) => {
     console.log("1");
