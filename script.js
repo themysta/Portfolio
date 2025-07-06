@@ -1,22 +1,24 @@
 //NEED TO PARSE
-function isMobile() {
-    const device = /Mobi|Iphone|webOS/i;
-    return device.test(navigator.userAgent);
-}
-if(isMobile()) {
-    Resize(window.innerWidth, window.innerHeight);
-} else {
-    console.log("Likely desktop");
-}
-function Resize(width, height) {
-    let ratio = { x:0, y:0 };  
-     ratio.x = width / 1920;
-     ratio.y = height / 1080
-     if(ratio.x && ratio.y < 1) {
-        heading.style.width / ratio.x;
-        headomg.style.height / ratio.y;
-     }
-}
+// function isMobile() {
+//     const device = /Mobi|Iphone|webOS/i;
+//     return device.test(navigator.userAgent);
+// }
+// if(isMobile()) {
+//     Resize(window.innerWidth, window.innerHeight);
+// } else {
+//     console.log("Likely desktop");
+// }
+// function Resize(width, height) {
+//     let ratio = { x:0, y:0 };  
+//      ratio.x = width / 1920;
+//      ratio.y = height / 1080
+//      if(ratio.x && ratio.y < 1) {
+//         heading.style.width / ratio.x;
+//         heading.style.height / ratio.y;
+
+//         //Need to shrink flex box
+//      }
+// }
 const test = document.getElementById('sprite');
 test.addEventListener("keydown", (event) => {
     console.log("1");
@@ -44,7 +46,10 @@ const resizeObserver = new ResizeObserver((entries) => {
                 //make animation? come clean up later it's a mess.
                 //I think the solution is to make a two layer background because it doesn't know how to incremenet the degrees
             } else {
-                document.getElementsByClassName('heading')[0].style.background="linear-gradient(-45deg, rgba(0, 0, 0, 1) 50%, rgba(154, 189, 223, 1) 0%)";
+                console.log("Changes were made to the header..");
+                //document.getElementsByClassName('heading')[0].style.background="linear-gradient(-45deg, rgba(0, 0, 0, 1) 50%, rgba(154, 189, 223, 1) 0%)";
+                // const header = document.getElementById('graphic');
+                // header.classList.add('heading-background');
             }
             /*
                 I had problems with my heading, I could have probably went the CSS route but I wanted to play around with

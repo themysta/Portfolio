@@ -93,8 +93,7 @@ html {
     position: absolute;
     margin-left: -8.5px;
 }
-.flex {     /* FLEX BOX FOR MAIN PANELS! */
-    border: 2px solid rgb(206, 21, 160);
+.flex {   /* FLEX BOX FOR MAIN PANELS! */
     margin-top: -1px;
     margin: auto;
     display: flex;
@@ -105,12 +104,12 @@ html {
     padding: 10px;
     position: relative;
     text-align: center;
-    width: 400px;
+    width: 100%;
     padding-top: 10px;
     z-index: 0;
 }
 .middle {
-    border: rgb(48, 31, 144) solid 2px;
+    
 }
 .left::before {
     content: "";
@@ -160,6 +159,24 @@ html {
     pointer-events: none;
     z-index: 1;
   }
+@media (max-width: 768px) {
+    .flex {
+        display: grid;
+        width: auto;
+    }
+    .left {
+        width: inherit;
+    }
+    .middle {
+        width: inherit;
+    }
+    .right {
+        width: inherit;
+    }
+    .padding {
+        padding: 0;
+    }
+}
 .dividing-line {
     border-left: 2px solid black;
     height: 500px;
@@ -195,6 +212,16 @@ h2, h3, h4, h5, h6, h7 {
     background: linear-gradient(-45deg, rgba(0, 0, 0, 1) 50%, rgba(154, 189, 223, 1) 0%);
     top: 0;
     z-index: -1;
+}
+@media (max-width: 768px) {
+    .heading-background {
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(-45deg, rgba(0, 0, 0, 1) 40%, rgba(154, 189, 223, 1) 0%);
+    }
+    .heading {
+        font-size: 1rem;
+    }
 }
 .collapse {
     border: 4px solid red;
