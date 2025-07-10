@@ -30,6 +30,19 @@
         opacity: 100%;
     }
 }
+.icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    display: block;
+}
+.profile {
+    display: inline-block;
+    vertical-align: middle;
+    object-fit: cover;
+    padding-right: 25px;
+}
 .flex-container {
     border: 2px solid rgb(0, 0, 0);
     font-size: 5rem;
@@ -61,7 +74,7 @@ body {
     overflow-x: hidden;
     position: relative;
     top: 0; left: 0;
-    margin: 5;
+    margin: 5px;
     padding: 10px;
     /*overflow-x: hidden; *fixes horizontal scroll thing, but was more of bandaid*/
 }
@@ -69,7 +82,7 @@ html {
     border: 2px solid red;
 }
 .bg {
-    border: 2px solid pink;
+    border: 2px solid rgb(0, 0, 0);
     background-color: rgb(102, 12, 12);
     background-position: center;
     background-position: cover;
@@ -142,6 +155,12 @@ html {
     height: 500px;
     top: 0;
 }
+h1 {
+    vertical-align: middle;
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+}
 h2, h3, h4, h5, h6, h7 {
     color: rgb(154, 189, 220);
     font-size: 2.5rem;
@@ -173,7 +192,14 @@ h2, h3, h4, h5, h6, h7 {
     top: 0;
     z-index: -1;
 }
-@media (max-width: 768px) {
+
+/* MOBILE */
+@media (max-width: 1230px) and (min-width: 769px) {
+    .heading-background {
+        background: linear-gradient(-45deg, rgba(0, 0, 0, 1) 35%, rgba(154, 189, 223, 1) 0%);
+    }
+}
+@media (max-width: 930px) {
     .heading-background {
         width: 100%;
         height: 50%;
@@ -181,6 +207,11 @@ h2, h3, h4, h5, h6, h7 {
     }
     .heading {
         font-size: 1rem;
+    }
+    .profile {
+        width: 50%;
+        height: 50%;
+        object-fit: scale-down;
     }
 }
 .collapse {
@@ -190,26 +221,33 @@ h2, h3, h4, h5, h6, h7 {
     transition: ease-out;
 }
 .contact-flex {
+    position: static;
     display: flex;
-    margin-left: -10px; /*spands the element to edge of page*/
-    margin-right: -10px;
-    padding-right: -15px; /*adjust back into frame*/
+    flex-direction: row;
+    height: 20px;
+    padding-right: 15px; /*adjust back into frame*/
     padding-left: 15px;
-    padding-top: 5px;
+    padding-top: 5px; /*clean up*/
     padding-bottom: 5px;
     font-size: 1rem;
     cursor: pointer;
     background-color:  rgba(154, 189, 223, 1);
+    overflow: hidden;
+    border: 2px solid black;
 }
 .contact-flex:hover {
     background-color: black;
 }
 .contact-content {
+    height: 100%;
     color:#000000;
     font-weight:400;
 }
 .contact-item {
+    position: relative;
+    vertical-align: middle;
     padding-left: 50px;
+    display: inline-block;
 }
 .header {
     display: flex;

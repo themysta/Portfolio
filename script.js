@@ -19,10 +19,6 @@
 //         //Need to shrink flex box
 //      }
 // }
-const test = document.getElementById('sprite');
-test.addEventListener("keydown", (event) => {
-    console.log("1");
-});
 //freeze may not be necessary here
 const viewport = Object.freeze ({
     x: window.innerWidth,
@@ -38,8 +34,10 @@ const heading = document.getElementsByClassName('heading');
 const resizeObserver = new ResizeObserver((entries) => {
     for(const entry of entries) {
         if(entry.target.innerWidth != viewport.x) {
-            console.log("At initialization: " + viewport.x);
-            console.log("Current: " + window.innerWidth);
+
+
+            // console.log("At initialization: " + viewport.x);
+             console.log("Current: " + window.innerWidth);
             var percentage = (viewport.x - window.innerWidth) / viewport.x * 100;
             if(percentage > 10) //magic number!
             {

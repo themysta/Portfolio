@@ -8,7 +8,6 @@ completing a full fledge website in the future that is capable of scaling into s
 code is available at this repository: https://github.com/themysta/Portfolio Enjoy :D
 
 
-
 TO DO:
 [DONE]  Fix body and background not covering entire page when scrolling, 
         also there is additional margin space on the right side.
@@ -19,14 +18,18 @@ TO DO:
 compatibility but broke desktop.
         Note: the solution for this was to explicitly set the width to fit into 3rds 33% and have
         a media query set the max-width to 100% if a "device" is detected. I tried to use Javascript
-        to force scaling use an agent, but it seemed messy and inconsistent.
+        to force scaling use an agent, but it seemed messy and inconsistent with detection.
 
 [DONE] Styling for mobile devices
+[FIXED] ship freezing when AD'ing
+[] Implement animation class 
 
 [] Add mobile compatibility for game controls
 [] Document problem solving, displaying things like the page being able to resize it's elements
    possibly use a gif?
-[] Include link to social, github repo w/logos etc.
+[ALMOST] Include link to social, github repo w/logos etc.
+
+[DONE] Include the fact im in skewl heh
 
 IDEAS:
 - Ship shoots headers into a transition state, making the website fun and interactable.
